@@ -1,6 +1,6 @@
 <!-- 
-  🤖 ZettBOT: Excellearn Homepage (Linktree Style)
-  File: index.html (Upload ke root repo mrexcellearn.github.io)
+  🤖 ZettBOT: Excellearn Homepage (Linktree Style - Marketing Optimized)
+  File: index.html 
 -->
 <!DOCTYPE html>
 <html lang="id" class="light">
@@ -21,15 +21,13 @@
             darkMode: 'class',
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
                         primary: {
                             50: '#f0fdf4',   
                             100: '#dcfce7',  
                             500: '#179c56',  
-                            600: '#117b44',  // Main Theme (Excellearn Green from Logo)
+                            600: '#117b44', // Excellearn Green
                             700: '#0e6236',  
                             900: '#14532d',
                         }
@@ -40,56 +38,75 @@
     </script>
     <style>
         body { font-family: 'Inter', sans-serif; }
-        
-        /* Animasi masuk yang halus (Fade & Slide Up) */
         .animate-fade-up {
             animation: fadeUp 0.6s ease-out forwards;
             opacity: 0;
             transform: translateY(20px);
         }
-        
         .delay-100 { animation-delay: 0.1s; }
         .delay-200 { animation-delay: 0.2s; }
         .delay-300 { animation-delay: 0.3s; }
 
         @keyframes fadeUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Abstract Background Pattern (Opsional agar tidak terlalu polos) */
         .bg-pattern {
-            background-image: radial-gradient(rgba(17, 123, 68, 0.05) 2px, transparent 2px);
-            background-size: 30px 30px;
+            background-image: radial-gradient(rgba(17, 123, 68, 0.08) 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
         }
         .dark .bg-pattern {
-            background-image: radial-gradient(rgba(255, 255, 255, 0.03) 2px, transparent 2px);
+            background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px);
+        }
+
+        /* TRENDING: Glass Shimmer Effect */
+        .shimmer-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer-btn::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 20%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(30deg);
+            transition: none;
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -60%; }
+            20% { left: 120%; }
+            100% { left: 120%; }
+        }
+
+        .premium-glow {
+            box-shadow: 0 0 20px rgba(23, 156, 86, 0.2);
         }
     </style>
 </head>
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 min-h-[100dvh] flex flex-col items-center py-10 px-4 transition-colors duration-300 bg-pattern relative overflow-x-hidden">
 
-    <!-- Tombol Tema (Dark/Light Mode) di Pojok Kanan Atas -->
+    <!-- Tombol Tema -->
     <div class="absolute top-6 right-6 z-50 animate-fade-up">
-        <button onclick="toggleTheme()" class="flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-slate-800 shadow-md hover:shadow-lg text-slate-500 dark:text-slate-400 transition-all border border-slate-200 dark:border-slate-700" title="Ganti Tema">
+        <button onclick="toggleTheme()" class="flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-slate-800 shadow-md hover:shadow-lg text-slate-500 dark:text-slate-400 transition-all border border-slate-200 dark:border-slate-700">
             <i id="themeIcon" class="fas fa-moon text-lg"></i>
         </button>
     </div>
 
-    <!-- Kontainer Utama (Maksimal selebar HP) -->
+    <!-- Kontainer Utama -->
     <div class="w-full max-w-md mx-auto flex flex-col items-center relative z-10 mt-8">
         
-        <!-- Foto Profil / Logo Utama -->
-        <!-- ZETTBOT UPDATE: Pastikan nama file gambar sesuai dengan yang kamu upload di folder 'logo' -->
+        <!-- Foto Profil -->
         <div class="animate-fade-up relative">
             <div class="w-28 h-28 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-xl bg-primary-600 flex items-center justify-center">
                 <img src="logo/mr-excellearn-02.png" onerror="this.src='https://ui-avatars.com/api/?name=Mr+Excellearn&background=117b44&color=fff&size=200'" alt="Mr. Excellearn Logo" class="w-full h-full object-cover">
             </div>
-            <!-- Badge Centang Biru / Verified -->
             <div class="absolute bottom-1 right-1 bg-blue-500 text-white w-7 h-7 rounded-full flex items-center justify-center border-2 border-white dark:border-slate-800 shadow-sm">
-                <i class="fas fa-check text-xs"></i>
+                <i class="fas fa-check text-[10px]"></i>
             </div>
         </div>
 
@@ -97,34 +114,47 @@
         <div class="mt-5 text-center animate-fade-up delay-100">
             <h1 class="text-2xl font-bold text-slate-900 dark:text-white mb-1">Mr. Excellearn</h1>
             <p class="text-sm font-medium text-primary-600 dark:text-primary-500 mb-3">@mrexcellearn</p>
-            <p class="text-sm text-slate-600 dark:text-slate-400 px-4 leading-relaxed">
+            <p class="text-sm text-slate-600 dark:text-slate-400 px-6 leading-relaxed">
                 Platform Edukasi & Sistem Manajemen Keuangan Berbasis Google Sheets Premium.
             </p>
         </div>
 
         <!-- AREA TOMBOL LINK -->
-        <div class="w-full flex flex-col gap-4 mt-8 animate-fade-up delay-200">
+        <div class="w-full flex flex-col gap-4 mt-8 animate-fade-up delay-200 px-2">
             
-            <!-- Link 1: Aplikasi Wealth Tracker (Link Utama) -->
-            <a href="landing-page"  class="group relative flex items-center justify-center w-full bg-white dark:bg-slate-800 border-2 border-primary-600 hover:border-primary-700 dark:border-primary-500 dark:hover:border-primary-400 p-4 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 overflow-hidden">
-                <div class="absolute inset-0 bg-primary-50/50 dark:bg-primary-900/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
-                <div class="absolute left-5 w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900/50 text-primary-600 dark:text-primary-400 flex items-center justify-center">
-                    <i class="fas fa-chart-line text-lg"></i>
+            <!-- Link 1: Premium Wealth Tracker -->
+            <a href="landing-page" class="shimmer-btn premium-glow group relative flex items-center justify-center w-full bg-primary-600 border-2 border-primary-600 p-4 rounded-2xl shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-primary-500/25">
+                <div class="absolute left-5 w-10 h-10 rounded-full bg-white/20 text-white flex items-center justify-center">
+                    <i class="fas fa-mobile-alt text-lg"></i>
                 </div>
-                <span class="font-semibold text-slate-900 dark:text-white relative z-10 pl-10 text-[15px]">Premium Wealth Tracker</span>
+                <div class="flex flex-col items-center pl-10 text-center">
+                    <span class="font-bold text-white text-[15px]">Catat Pengeluaran Semudah Ngechat</span>
+                    <span class="text-[10px] text-primary-100 opacity-80">Wealth Tracker Berbasis Google Sheets</span>
+                </div>
             </a>
 
-            <!-- Link 2: Template Gratis (Contoh) -->
+            <!-- Link 2: Webstore (GAS Marketing Focus) -->
+            <a href="/webstore" class="group relative flex items-center justify-center w-full bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 hover:border-primary-500 dark:hover:border-primary-500 p-4 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                <div class="absolute left-5 w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center group-hover:text-primary-600 group-hover:bg-primary-50 dark:group-hover:bg-primary-900/30 transition-all">
+                    <i class="fas fa-rocket text-lg"></i>
+                </div>
+                <div class="flex flex-col items-center pl-10 text-center">
+                    <span class="font-bold text-slate-800 dark:text-white text-[15px]">Website Siap Pakai basis Google Sheets</span>
+                    <span class="text-[10px] text-slate-500 dark:text-slate-400 italic">Pilih Template, Connect Sheets, & Langsung Online!</span>
+                </div>
+            </a>
+
+            <!-- Link 3: Template Gratis -->
             <a href="#" class="group relative flex items-center justify-center w-full bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 hover:border-primary-500 dark:hover:border-primary-500 p-4 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-                <div class="absolute left-5 w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 flex items-center justify-center group-hover:text-primary-600 transition-colors">
+                <div class="absolute left-5 w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center group-hover:text-primary-600 group-hover:bg-primary-50 dark:group-hover:bg-primary-900/30 transition-all">
                     <i class="fas fa-file-excel text-lg"></i>
                 </div>
                 <span class="font-semibold text-slate-700 dark:text-slate-200 relative z-10 pl-10 text-[15px]">Download Free Template</span>
             </a>
 
-            <!-- Link 3: Kelas / Edukasi (Contoh) -->
+            <!-- Link 4: Kelas Mastery -->
             <a href="#" class="group relative flex items-center justify-center w-full bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 hover:border-primary-500 dark:hover:border-primary-500 p-4 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-                <div class="absolute left-5 w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 flex items-center justify-center group-hover:text-primary-600 transition-colors">
+                <div class="absolute left-5 w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center group-hover:text-primary-600 group-hover:bg-primary-50 dark:group-hover:bg-primary-900/30 transition-all">
                     <i class="fas fa-graduation-cap text-lg"></i>
                 </div>
                 <span class="font-semibold text-slate-700 dark:text-slate-200 relative z-10 pl-10 text-[15px]">Kelas Mastery Google Sheets</span>
@@ -134,22 +164,22 @@
 
         <!-- AREA SOSIAL MEDIA -->
         <div class="flex items-center justify-center gap-6 mt-10 animate-fade-up delay-300">
-            <a href="#" class="text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 text-2xl transition-transform hover:scale-110">
-                <i class="fab fa-instagram"></i>
+            <a href="https://www.threads.com/@reyreyreyrey777" target="_blank" class="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all hover:scale-125">
+                <i class="fab fa-threads text-2xl"></i>
             </a>
-            <a href="#" class="text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 text-2xl transition-transform hover:scale-110">
-                <i class="fab fa-tiktok"></i>
+            <a href="https://www.instagram.com/mrexcellearn" target="_blank" class="text-slate-400 hover:text-pink-600 transition-all hover:scale-125">
+                <i class="fab fa-instagram text-2xl"></i>
             </a>
-            <a href="#" class="text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 text-2xl transition-transform hover:scale-110">
-                <i class="fab fa-youtube"></i>
+            <a href="https://www.tiktok.com/@mr.excellearn2" target="_blank" class="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all hover:scale-125">
+                <i class="fab fa-tiktok text-2xl"></i>
             </a>
-            <a href="#" class="text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 text-2xl transition-transform hover:scale-110">
-                <i class="fab fa-whatsapp"></i>
+            <a href="https://wa.me/6285161381710" target="_blank" class="text-slate-400 hover:text-green-500 transition-all hover:scale-125">
+                <i class="fab fa-whatsapp text-2xl"></i>
             </a>
         </div>
 
         <!-- Footer -->
-        <div class="mt-12 text-center animate-fade-up delay-300">
+        <div class="mt-16 text-center animate-fade-up delay-300">
             <p class="text-xs font-medium text-slate-400 dark:text-slate-500">
                 &copy; 2026 Excellearn. All rights reserved.
             </p>
@@ -157,10 +187,9 @@
 
     </div>
 
-    <!-- Script Tema (Dark/Light Mode) -->
+    <!-- Script Tema -->
     <script>
         const html = document.documentElement;
-
         function applyTheme(isDark) {
             const icon = document.getElementById('themeIcon');
             if (isDark) {
@@ -171,12 +200,9 @@
                 if(icon) icon.classList.replace('fa-sun', 'fa-moon');
             }
         }
-
-        // Cek preferensi dari local storage ATAU setting HP
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         const storedTheme = localStorage.getItem('theme');
         applyTheme(storedTheme === 'dark' || (!storedTheme && prefersDark));
-
         function toggleTheme() {
             const isCurrentlyDark = html.classList.contains('dark');
             const newTheme = !isCurrentlyDark;
