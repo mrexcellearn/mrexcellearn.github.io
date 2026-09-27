@@ -9,13 +9,15 @@ jobs:
   indexnow:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Submit to IndexNow
-        uses: carlyons/indexnow-action@v2.1.0
-        with:
-          site: 'excellearn.online'
-          key: ${{ secrets.BING_APIKEY }}
+      - name: Submit URL to IndexNow
+        run: |
+          curl -X POST "https://api.indexnow.org/indexnow" \
+          -H "Content-Type: application/json; charset=utf-8" \
+          -d '{
+            "host": "excellearn.online",
+            "key": "${{ secrets.BING_APIKEY }}",
+            "keyLocation": "https://excellearn.online/${{ secrets.BING_APIKEY }}.txt",
+            "urlList": [
+              "https://excellearn.online/"
+            ]
+          }'
