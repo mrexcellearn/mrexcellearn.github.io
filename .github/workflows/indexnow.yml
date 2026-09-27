@@ -1,0 +1,21 @@
+name: IndexNow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Submit to IndexNow
+        uses: carlyons/indexnow-action@v2.1.0
+        with:
+          site: 'excellearn.online'
+          key: ${{ secrets.BING_APIKEY }}
