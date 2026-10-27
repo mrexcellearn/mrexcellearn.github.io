@@ -1,0 +1,53 @@
+{
+  "profil": {
+    "nama": "Mr. Excellearn",
+    "handle": "@mr.excellearn",
+    "bio": "Excellent in Excel"
+  },
+  "sosial": [
+    {
+      "nama": "TikTok",
+      "ikon": "tiktok",
+      "link": "https://www.tiktok.com/@mr.excellearn"
+    },
+    {
+      "nama": "Instagram",
+      "ikon": "instagram",
+      "link": "https://www.instagram.com/mr.excellearn/"
+    },
+    {
+      "nama": "Threads",
+      "ikon": "threads",
+      "link": "https://www.threads.com/@reyreyreyrey777"
+    },
+    {
+      "nama": "LinkedIn",
+      "ikon": "linkedin",
+      "link": "https://www.linkedin.com/in/reynaldi-karundeng/"
+    }
+  ],
+  "unggulan": {
+    "label": "Gratis",
+    "judul": "Tes Excel Interview Admin",
+    "deskripsi": "Cek level Excel kamu sebelum tes interview kerja. Soal langsung di file, jawaban dicek otomatis.",
+    "harga": "Rp0",
+    "hargaCoret": "",
+    "tombol": "Ambil di Lynk.id",
+    "link": "https://lynk.id/mr.excellearn/61nyy67epy86",
+    "kampanye": "tes-interview"
+  },
+  "tombol": [
+    {
+      "judul": "Lihat semua produk di Lynk.id",
+      "ikon": "toko",
+      "link": "https://lynk.id/mr.excellearn",
+      "kampanye": "semua-produk"
+    },
+    {
+      "judul": "Traktir Mr. Excellearn kopi",
+      "ikon": "kopi",
+      "link": "https://lynk.id/mr.excellearn/s/19EJ7nO",
+      "kampanye": "traktir-kopi"
+    }
+  ]
+}
