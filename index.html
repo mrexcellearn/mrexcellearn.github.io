@@ -1,220 +1,318 @@
-<!-- 
-  🤖 ZettBOT: Excellearn Homepage (Linktree Style - Marketing Optimized)
-  File: index.html 
--->
 <!DOCTYPE html>
-<html lang="id" class="light">
+<html lang="id">
 <head>
-    <meta name="msvalidate.01" content="F32A2860315E7C804D4EDBC052195E32" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mr. Excellearn | Link in Bio</title>
-    
-    <!-- FAVICON SUPPORT -->
-    <link rel="icon" type="image/png" href="logo/mr-excellearn-02.png">
-    <link rel="apple-touch-icon" href="logo/mr-excellearn-02.png">
-    <meta name="theme-color" content="#117b44">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mr. Excellearn: Belajar Excel buat kerja</title>
+  <meta name="description" content="Excellent in Excel. Tes Excel Interview Admin gratis dan tips Excel buat kerja kantoran dari Mr. Excellearn (@mr.excellearn).">
+  <link rel="canonical" href="https://excellearn.online/">
+  <meta name="msvalidate.01" content="F32A2860315E7C804D4EDBC052195E32">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0B2E1B" media="(prefers-color-scheme: dark)">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: {
-                        primary: {
-                            50: '#f0fdf4',   
-                            100: '#dcfce7',  
-                            500: '#179c56',  
-                            600: '#117b44', // Excellearn Green
-                            700: '#0e6236',  
-                            900: '#14532d',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .animate-fade-up {
-            animation: fadeUp 0.6s ease-out forwards;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        .delay-100 { animation-delay: 0.1s; }
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-300 { animation-delay: 0.3s; }
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/assets/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 
-        @keyframes fadeUp {
-            to { opacity: 1; transform: translateY(0); }
-        }
+  <!-- Preview saat link dibagikan (WhatsApp, IG, X) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mr. Excellearn">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:url" content="https://excellearn.online/">
+  <meta property="og:title" content="Mr. Excellearn: Belajar Excel buat kerja">
+  <meta property="og:description" content="Excellent in Excel. Ambil Tes Excel Interview Admin gratis.">
+  <meta property="og:image" content="https://excellearn.online/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logo Mr. Excellearn dengan tulisan Excellent in Excel">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mr. Excellearn: Belajar Excel buat kerja">
+  <meta name="twitter:description" content="Excellent in Excel. Ambil Tes Excel Interview Admin gratis.">
+  <meta name="twitter:image" content="https://excellearn.online/assets/og.png">
 
-        .bg-pattern {
-            background-image: radial-gradient(rgba(17, 123, 68, 0.08) 1.5px, transparent 1.5px);
-            background-size: 24px 24px;
-        }
-        .dark .bg-pattern {
-            background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px);
-        }
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mr. Excellearn",
+    "alternateName": "Excellearn",
+    "description": "Excellent in Excel",
+    "url": "https://excellearn.online/",
+    "image": "https://excellearn.online/assets/avatar.webp",
+    "sameAs": [
+      "https://www.tiktok.com/@mr.excellearn",
+      "https://www.instagram.com/mr.excellearn/",
+      "https://www.threads.com/@reyreyreyrey777",
+      "https://www.linkedin.com/in/reynaldi-karundeng/"
+    ]
+  }
+  </script>
 
-        /* TRENDING: Glass Shimmer Effect */
-        .shimmer-btn {
-            position: relative;
-            overflow: hidden;
-        }
-        .shimmer-btn::after {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: -60%;
-            width: 20%;
-            height: 200%;
-            background: rgba(255, 255, 255, 0.3);
-            transform: rotate(30deg);
-            transition: none;
-            animation: shimmer 3s infinite;
-        }
+  <link rel="preload" href="/assets/fonts/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/montserrat-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 
-        @keyframes shimmer {
-            0% { left: -60%; }
-            20% { left: 120%; }
-            100% { left: 120%; }
-        }
+  <style>
+    @font-face { font-family: "Montserrat"; font-weight: 500; font-display: swap; src: url("/assets/fonts/montserrat-latin-500-normal.woff2") format("woff2"); }
+    @font-face { font-family: "Montserrat"; font-weight: 700; font-display: swap; src: url("/assets/fonts/montserrat-latin-700-normal.woff2") format("woff2"); }
+    @font-face { font-family: "Montserrat"; font-weight: 800; font-display: swap; src: url("/assets/fonts/montserrat-latin-800-normal.woff2") format("woff2"); }
 
-        .premium-glow {
-            box-shadow: 0 0 20px rgba(23, 156, 86, 0.2);
-        }
-    </style>
+    /* Warna dari brand-guide: hijau #0F7C42, mode gelap Night Green #0B2E1B */
+    :root {
+      color-scheme: light;
+      --bg: #FFFFFF;
+      --ink: #0D1A12;
+      --muted: #56655C;
+      --line: #DCE4DF;
+      --soft: #E7F3EC;
+      --green: #0F7C42;
+      --on-green: #FFFFFF;
+      --card-btn-bg: #FFFFFF;
+      --card-btn-ink: #0D1A12;
+      --yellow: #D6D90F;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+        --bg: #0B2E1B;
+        --ink: #EEF5F0;
+        --muted: #A5BCAE;
+        --line: #1C4A30;
+        --soft: #123D25;
+        --green: #31C780;
+        --on-green: #06180E;
+        --card-btn-bg: #0B2E1B;
+        --card-btn-ink: #EEF5F0;
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      min-height: 100dvh;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+      font-weight: 500;
+      line-height: 1.45;
+      padding: max(40px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(32px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+    }
+    a { color: inherit; }
+    :focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+    .icon { width: 1em; height: 1em; fill: currentColor; flex: none; }
+
+    main { max-width: 440px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+
+    .who { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; }
+    .avatar { width: 96px; height: 96px; border-radius: 50%; background: #FFFFFF; border: 3px solid var(--green); object-fit: cover; }
+    .who h1 { margin: 10px 0 0; font-size: 24px; font-weight: 800; letter-spacing: -0.01em; line-height: 1.2; }
+    .handle { font-size: 14px; font-weight: 700; color: var(--green); }
+    .bio { margin: 4px 0 0; font-size: 15px; color: var(--muted); }
+
+    .socials { display: flex; justify-content: center; gap: 12px; margin: 0; padding: 0; list-style: none; }
+    .socials a {
+      width: 44px; height: 44px; border-radius: 50%;
+      display: grid; place-items: center;
+      border: 1px solid var(--line); text-decoration: none; font-size: 18px;
+      transition: background-color .15s, border-color .15s;
+    }
+    .socials a:hover { background: var(--soft); border-color: var(--green); }
+
+    .feat {
+      display: flex; flex-direction: column; gap: 10px;
+      background: var(--green); color: var(--on-green);
+      border-radius: 16px; padding: 18px; text-decoration: none;
+      transition: transform .15s;
+    }
+    .feat .tag {
+      align-self: flex-start; background: var(--yellow); color: #0D1A12;
+      font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+      padding: 3px 8px; border-radius: 4px;
+    }
+    .feat h2 { margin: 0; font-size: 20px; font-weight: 800; line-height: 1.25; }
+    .feat p { margin: 0; font-size: 14px; line-height: 1.5; }
+    .feat .row { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 4px; }
+    .price { font-weight: 800; font-size: 17px; }
+    .price s { font-weight: 600; font-size: 13px; opacity: .75; margin-left: 6px; }
+    .feat .btn {
+      display: inline-flex; align-items: center; gap: 8px; min-height: 44px;
+      background: var(--card-btn-bg); color: var(--card-btn-ink);
+      font-weight: 800; font-size: 14px; padding: 10px 16px; border-radius: 999px; white-space: nowrap;
+    }
+
+    .links { display: flex; flex-direction: column; gap: 12px; margin: 0; padding: 0; list-style: none; }
+    .link {
+      display: flex; justify-content: center; align-items: center; gap: 10px; min-height: 52px;
+      border: 2px solid var(--green); color: var(--green); border-radius: 999px;
+      padding: 12px 20px; font-weight: 800; font-size: 15px; text-align: center; text-decoration: none;
+      transition: background-color .15s;
+    }
+    .link:hover { background: var(--soft); }
+    .link .icon { font-size: 18px; }
+
+    footer { text-align: center; font-size: 12px; color: var(--muted); padding-top: 8px; }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .feat:hover { transform: translateY(-2px); }
+      main > * { animation: up .45s ease-out both; }
+      main > :nth-child(2) { animation-delay: .05s; }
+      main > :nth-child(3) { animation-delay: .1s; }
+      main > :nth-child(4) { animation-delay: .15s; }
+      @keyframes up { from { opacity: 0; transform: translateY(8px); } }
+    }
+  </style>
 </head>
-<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 min-h-[100dvh] flex flex-col items-center py-10 px-4 transition-colors duration-300 bg-pattern relative overflow-x-hidden">
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-tiktok" viewBox="0 0 16 16"><path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></symbol>
+    <symbol id="i-threads" viewBox="0 0 16 16"><path d="M6.321 6.016c-.27-.18-1.166-.802-1.166-.802.756-1.081 1.753-1.502 3.132-1.502.975 0 1.803.327 2.394.948s.928 1.509 1.005 2.644q.492.207.905.484c1.109.745 1.719 1.86 1.719 3.137 0 2.716-2.226 5.075-6.256 5.075C4.594 16 1 13.987 1 7.994 1 2.034 4.482 0 8.044 0 9.69 0 13.55.243 15 5.036l-1.36.353C12.516 1.974 10.163 1.43 8.006 1.43c-3.565 0-5.582 2.171-5.582 6.79 0 4.143 2.254 6.343 5.63 6.343 2.777 0 4.847-1.443 4.847-3.556 0-1.438-1.208-2.127-1.27-2.127-.236 1.234-.868 3.31-3.644 3.31-1.618 0-3.013-1.118-3.013-2.582 0-2.09 1.984-2.847 3.55-2.847.586 0 1.294.04 1.663.114 0-.637-.54-1.728-1.9-1.728-1.25 0-1.566.405-1.967.868ZM8.716 8.19c-2.04 0-2.304.87-2.304 1.416 0 .878 1.043 1.168 1.6 1.168 1.02 0 2.067-.282 2.232-2.423a6.2 6.2 0 0 0-1.528-.161"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></symbol>
+    <symbol id="i-kopi" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M.5 6a.5.5 0 0 0-.488.608l1.652 7.434A2.5 2.5 0 0 0 4.104 16h5.792a2.5 2.5 0 0 0 2.44-1.958l.131-.59a3 3 0 0 0 1.3-5.854l.221-.99A.5.5 0 0 0 13.5 6zM13 12.5a2 2 0 0 1-.316-.025l.867-3.898A2.001 2.001 0 0 1 13 12.5M2.64 13.825 1.123 7h11.754l-1.517 6.825A1.5 1.5 0 0 1 9.896 15H4.104a1.5 1.5 0 0 1-1.464-1.175"/><path d="m4.4.8-.003.004-.014.019a4 4 0 0 0-.204.31 2 2 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.6.6 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3 3 0 0 1-.202.388 5 5 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 3.6 4.2l.003-.004.014-.019a4 4 0 0 0 .204-.31 2 2 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.6.6 0 0 0-.09-.252A4 4 0 0 0 3.6 2.8l-.01-.012a5 5 0 0 1-.37-.543A1.53 1.53 0 0 1 3 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a6 6 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 4.4.8m3 0-.003.004-.014.019a4 4 0 0 0-.204.31 2 2 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.6.6 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3 3 0 0 1-.202.388 5 5 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 6.6 4.2l.003-.004.014-.019a4 4 0 0 0 .204-.31 2 2 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.6.6 0 0 0-.09-.252A4 4 0 0 0 6.6 2.8l-.01-.012a5 5 0 0 1-.37-.543A1.53 1.53 0 0 1 6 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a6 6 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 7.4.8m3 0-.003.004-.014.019a4 4 0 0 0-.204.31 2 2 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.6.6 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3 3 0 0 1-.202.388 5 5 0 0 1-.252.382l-.019.025-.005.008-.002.002A.5.5 0 0 1 9.6 4.2l.003-.004.014-.019a4 4 0 0 0 .204-.31 2 2 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.6.6 0 0 0-.09-.252A4 4 0 0 0 9.6 2.8l-.01-.012a5 5 0 0 1-.37-.543A1.53 1.53 0 0 1 9 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a6 6 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 10.4.8"/></symbol>
+    <symbol id="i-panah" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/></symbol>
+  </svg>
 
-    <!-- Tombol Tema -->
-    <div class="absolute top-6 right-6 z-50 animate-fade-up">
-        <button onclick="toggleTheme()" class="flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-slate-800 shadow-md hover:shadow-lg text-slate-500 dark:text-slate-400 transition-all border border-slate-200 dark:border-slate-700">
-            <i id="themeIcon" class="fas fa-moon text-lg"></i>
-        </button>
+  <!--
+    Isi halaman diambil dari links.json. Markup di bawah ini cadangan:
+    tampil kalau links.json gagal dibaca, dan dibaca mesin pencari.
+  -->
+  <main>
+    <header class="who">
+      <img class="avatar" src="/assets/avatar.webp" width="96" height="96" alt="Maskot Mr. Excellearn">
+      <h1 id="nama">Mr. Excellearn</h1>
+      <div class="handle" id="handle">@mr.excellearn</div>
+      <p class="bio" id="bio">Excellent in Excel</p>
+    </header>
+
+    <ul class="socials" id="sosial" aria-label="Sosial media">
+      <li><a href="https://www.tiktok.com/@mr.excellearn" aria-label="TikTok" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-tiktok"/></svg></a></li>
+      <li><a href="https://www.instagram.com/mr.excellearn/" aria-label="Instagram" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+      <li><a href="https://www.threads.com/@reyreyreyrey777" aria-label="Threads" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-threads"/></svg></a></li>
+      <li><a href="https://www.linkedin.com/in/reynaldi-karundeng/" aria-label="LinkedIn" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+    </ul>
+
+    <div id="unggulan">
+      <a class="feat" href="https://lynk.id/mr.excellearn/61nyy67epy86" data-kampanye="tes-interview" data-blok="unggulan">
+        <span class="tag">Gratis</span>
+        <h2>Tes Excel Interview Admin</h2>
+        <p>Cek level Excel kamu sebelum tes interview kerja. Soal langsung di file, jawaban dicek otomatis.</p>
+        <div class="row">
+          <span class="price">Rp0</span>
+          <span class="btn">Ambil di Lynk.id <svg class="icon" aria-hidden="true"><use href="#i-panah"/></svg></span>
+        </div>
+      </a>
     </div>
 
-    <!-- Kontainer Utama -->
-    <div class="w-full max-w-md mx-auto flex flex-col items-center relative z-10 mt-8">
-        
-        <!-- Foto Profil -->
-        <div class="animate-fade-up relative">
-            <div class="w-28 h-28 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-xl bg-primary-600 flex items-center justify-center">
-                <img src="logo/mr-excellearn-02.png" onerror="this.src='https://ui-avatars.com/api/?name=Mr+Excellearn&background=117b44&color=fff&size=200'" alt="Mr. Excellearn Logo" class="w-full h-full object-cover">
-            </div>
-            <div class="absolute bottom-1 right-1 bg-blue-500 text-white w-7 h-7 rounded-full flex items-center justify-center border-2 border-white dark:border-slate-800 shadow-sm">
-                <i class="fas fa-check text-[10px]"></i>
-            </div>
-        </div>
+    <ul class="links" id="tombol">
+      <li><a class="link" href="https://lynk.id/mr.excellearn/s/19EJ7nO" data-kampanye="traktir-kopi" data-blok="tombol"><svg class="icon" aria-hidden="true"><use href="#i-kopi"/></svg>Traktir Mr. Excellearn kopi</a></li>
+    </ul>
 
-        <!-- Nama & Deskripsi -->
-        <div class="mt-5 text-center animate-fade-up delay-100">
-            <h1 class="text-2xl font-bold text-slate-900 dark:text-white mb-1">Mr. Excellearn</h1>
-            <p class="text-sm font-medium text-primary-600 dark:text-primary-500 mb-3">@mrexcellearn</p>
-            <p class="text-sm text-slate-600 dark:text-slate-400 px-6 leading-relaxed">
-                Platform Edukasi & Sistem Manajemen Keuangan Berbasis Google Sheets Premium.
-            </p>
-        </div>
+    <footer>© 2026 Excellearn · excellearn.online</footer>
+  </main>
 
-        <!-- AREA TOMBOL LINK -->
-        <div class="w-full flex flex-col gap-4 mt-8 animate-fade-up delay-200 px-2">
-            
-            <!-- Link 1: Premium Wealth Tracker -->
-            <a href="landingpage" class="shimmer-btn premium-glow group relative flex items-center justify-center w-full bg-primary-600 border-2 border-primary-600 p-4 rounded-2xl shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-primary-500/25">
-                <div class="absolute left-5 w-10 h-10 rounded-full bg-white/20 text-white flex items-center justify-center">
-                    <i class="fas fa-mobile-alt text-lg"></i>
-                </div>
-                <div class="flex flex-col items-center pl-10 text-center">
-                    <span class="font-bold text-white text-[15px]">Catat Pengeluaran Semudah Ngechat</span>
-                    <span class="text-[10px] text-primary-100 opacity-80">Wealth Tracker Berbasis Google Sheets</span>
-                </div>
-            </a>
+  <script>
+  (function () {
+    // Sumber kunjungan: /tt, /ig, /th meneruskan ?src=..., disimpan selama tab terbuka
+    var src = "direct";
+    try {
+      var p = new URLSearchParams(location.search).get("src");
+      if (p && /^[a-z0-9-]{1,30}$/.test(p)) {
+        sessionStorage.setItem("src", p);
+        history.replaceState(null, "", location.pathname + location.hash);
+      }
+      src = p || sessionStorage.getItem("src") || "direct";
+    } catch (e) {}
 
-            <!-- Link 2: Webstore (GAS Marketing Focus) -->
-            <a href="webstore" class="group relative flex items-center justify-center w-full bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 hover:border-primary-500 dark:hover:border-primary-500 p-4 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-                <div class="absolute left-5 w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center group-hover:text-primary-600 group-hover:bg-primary-50 dark:group-hover:bg-primary-900/30 transition-all">
-                    <i class="fas fa-rocket text-lg"></i>
-                </div>
-                <div class="flex flex-col items-center pl-10 text-center">
-                    <span class="font-bold text-slate-800 dark:text-white text-[15px]">Website Siap Pakai basis Google Sheets</span>
-                    <span class="text-[10px] text-slate-500 dark:text-slate-400 italic">Tanpa coding, tanpa hosting!</span>
-                </div>
-            </a>
+    var IKON = { tiktok: 1, instagram: 1, threads: 1, linkedin: 1, kopi: 1 };
 
-            <!-- Link 3: Template Gratis -->
-            <a href="template" class="group relative flex items-center justify-center w-full bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 hover:border-primary-500 dark:hover:border-primary-500 p-4 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-                <div class="absolute left-5 w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center group-hover:text-primary-600 group-hover:bg-primary-50 dark:group-hover:bg-primary-900/30 transition-all">
-                    <i class="fas fa-file-excel text-lg"></i>
-                </div>
-                <span class="font-semibold text-slate-700 dark:text-slate-200 relative z-10 pl-10 text-[15px]">Download Free Template</span>
-            </a>
+    function el(tag, attrs, kids) {
+      var n = document.createElement(tag);
+      for (var k in attrs || {}) {
+        if (k === "text") n.textContent = attrs[k];
+        else n.setAttribute(k, attrs[k]);
+      }
+      (kids || []).forEach(function (c) { if (c) n.appendChild(c); });
+      return n;
+    }
+    function icon(name) {
+      if (!IKON[name] && name !== "panah") return null;
+      var ns = "http://www.w3.org/2000/svg";
+      var s = document.createElementNS(ns, "svg");
+      s.setAttribute("class", "icon");
+      s.setAttribute("aria-hidden", "true");
+      var u = document.createElementNS(ns, "use");
+      u.setAttribute("href", "#i-" + name);
+      s.appendChild(u);
+      return s;
+    }
+    function aman(url) { return typeof url === "string" && /^https?:\/\//.test(url); }
 
-            <!-- Link 4: Kelas Mastery -->
-            <a href="#" class="group relative flex items-center justify-center w-full bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 hover:border-primary-500 dark:hover:border-primary-500 p-4 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-                <div class="absolute left-5 w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center group-hover:text-primary-600 group-hover:bg-primary-50 dark:group-hover:bg-primary-900/30 transition-all">
-                    <i class="fas fa-graduation-cap text-lg"></i>
-                </div>
-                <span class="font-semibold text-slate-700 dark:text-slate-200 relative z-10 pl-10 text-[15px]">Kelas Mastery Google Sheets</span>
-            </a>
+    // Tambah UTM ke link Lynk.id
+    function utm(a) {
+      try {
+        var u = new URL(a.href);
+        if (!/(^|\.)lynk\.id$/.test(u.hostname)) return;
+        u.protocol = "https:";
+        u.searchParams.set("utm_source", src);
+        u.searchParams.set("utm_medium", "linkhub");
+        if (a.dataset.kampanye) u.searchParams.set("utm_campaign", a.dataset.kampanye);
+        if (a.dataset.blok) u.searchParams.set("utm_content", a.dataset.blok);
+        a.href = u.toString();
+      } catch (e) {}
+    }
 
-        </div>
+    function render(d) {
+      var pr = d.profil || {};
+      if (pr.nama) document.getElementById("nama").textContent = pr.nama;
+      if (pr.handle) document.getElementById("handle").textContent = pr.handle;
+      if (pr.bio) document.getElementById("bio").textContent = pr.bio;
 
-        <!-- AREA SOSIAL MEDIA -->
-        <div class="flex items-center justify-center gap-6 mt-10 animate-fade-up delay-300">
-            <a href="https://www.threads.com/@reyreyreyrey777" target="_blank" class="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all hover:scale-125">
-                <i class="fab fa-threads text-2xl"></i>
-            </a>
-            <a href="https://www.instagram.com/mrexcellearn" target="_blank" class="text-slate-400 hover:text-pink-600 transition-all hover:scale-125">
-                <i class="fab fa-instagram text-2xl"></i>
-            </a>
-            <a href="https://www.tiktok.com/@mr.excellearn2" target="_blank" class="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all hover:scale-125">
-                <i class="fab fa-tiktok text-2xl"></i>
-            </a>
-            <a href="https://wa.me/6285161381710" target="_blank" class="text-slate-400 hover:text-green-500 transition-all hover:scale-125">
-                <i class="fab fa-whatsapp text-2xl"></i>
-            </a>
-        </div>
+      if (Array.isArray(d.sosial)) {
+        var ul = document.getElementById("sosial");
+        ul.replaceChildren.apply(ul, d.sosial.filter(function (s) { return aman(s.link); }).map(function (s) {
+          var a = el("a", { href: s.link, "aria-label": s.nama || s.ikon, rel: "noopener" }, [icon(s.ikon)]);
+          if (!IKON[s.ikon]) a.textContent = (s.nama || "?").slice(0, 2);
+          return el("li", {}, [a]);
+        }));
+      }
 
-        <!-- Footer -->
-        <div class="mt-16 text-center animate-fade-up delay-300">
-            <p class="text-xs font-medium text-slate-400 dark:text-slate-500">
-                &copy; 2026 Excellearn. All rights reserved.
-            </p>
-        </div>
-
-    </div>
-
-    <!-- Script Tema -->
-    <script>
-        const html = document.documentElement;
-        function applyTheme(isDark) {
-            const icon = document.getElementById('themeIcon');
-            if (isDark) {
-                html.classList.add('dark');
-                if(icon) icon.classList.replace('fa-moon', 'fa-sun');
-            } else {
-                html.classList.remove('dark');
-                if(icon) icon.classList.replace('fa-sun', 'fa-moon');
-            }
+      var box = document.getElementById("unggulan");
+      var u = d.unggulan;
+      if (u && aman(u.link)) {
+        var price = null;
+        if (u.harga) {
+          price = el("span", { class: "price", text: u.harga });
+          if (u.hargaCoret) price.appendChild(el("s", { text: u.hargaCoret }));
         }
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const storedTheme = localStorage.getItem('theme');
-        applyTheme(storedTheme === 'dark' || (!storedTheme && prefersDark));
-        function toggleTheme() {
-            const isCurrentlyDark = html.classList.contains('dark');
-            const newTheme = !isCurrentlyDark;
-            localStorage.setItem('theme', newTheme ? 'dark' : 'light');
-            applyTheme(newTheme);
-        }
-    </script>
+        var btn = el("span", { class: "btn", text: (u.tombol || "Lihat di Lynk.id") + " " }, [icon("panah")]);
+        box.replaceChildren(el("a", { class: "feat", href: u.link, "data-kampanye": u.kampanye || "", "data-blok": "unggulan" }, [
+          u.label ? el("span", { class: "tag", text: u.label }) : null,
+          el("h2", { text: u.judul || "" }),
+          u.deskripsi ? el("p", { text: u.deskripsi }) : null,
+          el("div", { class: "row" }, [price || el("span"), btn])
+        ]));
+      } else if (u === null) {
+        box.replaceChildren();
+      }
+
+      if (Array.isArray(d.tombol)) {
+        var list = document.getElementById("tombol");
+        list.replaceChildren.apply(list, d.tombol.filter(function (t) { return aman(t.link); }).map(function (t) {
+          var a = el("a", { class: "link", href: t.link, "data-kampanye": t.kampanye || "", "data-blok": "tombol" }, [icon(t.ikon)]);
+          a.appendChild(document.createTextNode(t.judul || t.link));
+          return el("li", {}, [a]);
+        }));
+      }
+      document.querySelectorAll("a[href]").forEach(utm);
+    }
+
+    document.querySelectorAll("a[href]").forEach(utm);
+    fetch("/links.json", { cache: "no-cache" })
+      .then(function (r) { if (!r.ok) throw r.status; return r.json(); })
+      .then(render)
+      .catch(function () { /* links.json rusak atau gagal dibaca: markup cadangan tetap tampil */ });
+  })();
+  </script>
 </body>
 </html>

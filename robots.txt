@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /tt/
+Disallow: /ig/
+Disallow: /th/
+
+Sitemap: https://excellearn.online/sitemap.xml
