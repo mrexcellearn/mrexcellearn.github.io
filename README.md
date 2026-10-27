@@ -11,7 +11,7 @@ Semua teks dan link ada di [`links.json`](links.json). Buka file itu di github.c
 | `profil` | `nama`, `handle`, `bio` |
 | `sosial` | Daftar ikon sosmed. `ikon` salah satu dari `tiktok`, `instagram`, `threads`, `linkedin` |
 | `unggulan` | Kotak hijau, cukup satu produk. `label` (misal Gratis, Baru, Promo), `judul`, `deskripsi`, `harga`, `hargaCoret` (boleh `""`), `tombol`, `link`, `kampanye`. Isi `null` untuk menyembunyikan kotaknya |
-| `tombol` | Tombol di bawah kotak unggulan. `judul`, `link`, `kampanye`, `ikon` (opsional, misal `kopi`) |
+| `tombol` | Tombol di bawah kotak unggulan. `judul`, `link`, `kampanye`, `ikon` (opsional: `toko` atau `kopi`) |
 
 `kampanye` dipakai sebagai `utm_campaign`. Tulis huruf kecil pakai tanda hubung, misal `tes-interview`.
 

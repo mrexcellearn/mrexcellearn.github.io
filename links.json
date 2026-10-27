@@ -5,10 +5,26 @@
     "bio": "Excellent in Excel"
   },
   "sosial": [
-    { "nama": "TikTok", "ikon": "tiktok", "link": "https://www.tiktok.com/@mr.excellearn" },
-    { "nama": "Instagram", "ikon": "instagram", "link": "https://www.instagram.com/mr.excellearn/" },
-    { "nama": "Threads", "ikon": "threads", "link": "https://www.threads.com/@reyreyreyrey777" },
-    { "nama": "LinkedIn", "ikon": "linkedin", "link": "https://www.linkedin.com/in/reynaldi-karundeng/" }
+    {
+      "nama": "TikTok",
+      "ikon": "tiktok",
+      "link": "https://www.tiktok.com/@mr.excellearn"
+    },
+    {
+      "nama": "Instagram",
+      "ikon": "instagram",
+      "link": "https://www.instagram.com/mr.excellearn/"
+    },
+    {
+      "nama": "Threads",
+      "ikon": "threads",
+      "link": "https://www.threads.com/@reyreyreyrey777"
+    },
+    {
+      "nama": "LinkedIn",
+      "ikon": "linkedin",
+      "link": "https://www.linkedin.com/in/reynaldi-karundeng/"
+    }
   ],
   "unggulan": {
     "label": "Gratis",
@@ -21,6 +37,12 @@
     "kampanye": "tes-interview"
   },
   "tombol": [
+    {
+      "judul": "Lihat semua produk di Lynk.id",
+      "ikon": "toko",
+      "link": "https://lynk.id/mr.excellearn",
+      "kampanye": "semua-produk"
+    },
     {
       "judul": "Traktir Mr. Excellearn kopi",
       "ikon": "kopi",
